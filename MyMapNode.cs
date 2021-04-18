@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC2_WordFreq_InPara
+namespace UC3_RemoveWord
 {
+
     class MyMapNode<K, V>
     {
         private readonly int size;
@@ -54,6 +55,20 @@ namespace UC2_WordFreq_InPara
                 }
             }
         }
+        public void Remove(MyMapNode<int, string> hash, string word)
+        {
+            for (int key = 0; key < hash.size; key++)
+            {
+                if (hash.Get(key).Equals(word))
+                {
+                    hash.Remove(key);
+                    Console.WriteLine("Removed " + word + " from paragraph");
+                }
+            }
+        }
+
+
+
         public void Remove(K key)
         {
             int position = GetArrayPosition(key);
@@ -107,6 +122,8 @@ namespace UC2_WordFreq_InPara
             }
             return linkedList;
         }
+
+
     }
 
     public class KeyValue<k, v>
@@ -115,4 +132,5 @@ namespace UC2_WordFreq_InPara
         public v Value { get; set; }
 
     }
+
 }
