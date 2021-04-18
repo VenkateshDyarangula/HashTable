@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC3_RemoveWord
+namespace UC4_BST
 {
-
-    class MyMapNode<K, V>
+   public class MyMapNode<K, V>
     {
         private readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
@@ -66,9 +65,6 @@ namespace UC3_RemoveWord
                 }
             }
         }
-
-
-
         public void Remove(K key)
         {
             int position = GetArrayPosition(key);
@@ -132,5 +128,4 @@ namespace UC3_RemoveWord
         public v Value { get; set; }
 
     }
-
 }

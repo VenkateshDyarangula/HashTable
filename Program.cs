@@ -1,7 +1,9 @@
 ﻿using System;
+using UC4_BST;
 
-namespace UC3_RemoveWord
+namespace UC4_BST
 {
+
     class Program
     {
         static void Main(string[] args)
@@ -22,10 +24,13 @@ namespace UC3_RemoveWord
                 hash1.Add(key, word);
                 key++;
             }
-
             hash.Remove(hash1, "avoidable");
 
-        }
-    }
+            BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(40);
+            binarySearch.Insert(30);
+            binarySearch.Insert(70);
 
+        }
+        
+    }
 }
